@@ -73,23 +73,6 @@ class MyModelAdmin(MediumEditorAdmin, admin.ModelAdmin):
 
 [Report issues or feature requests](https://github.com/g3rd/django-mediumeditor/issues)
 
-## Todo
-
-Since this is a very new project, 
-
-- [ ] Documentation
-- [ ] Clean-up Django admin display
-    - Toolbar style
-    - Anchor configuration toolbar
-    - Bold to use ```<strong>```
-    - Italic to use ```<em>```
-    - Inline styles do not inherit Django Admin (see H2 and unordered lists)
-- [ ] Expand Django support to 1.8
-- [ ] Expand Python support to 2
-- [ ] Tests!
-- [ ] Configure the toolbar - globally
-- [ ] Configure the toolbar - per form
-- [ ] Configure the toolbar - per field
 
 ## License
 MIT: https://github.com/g3rd/django-mediumeditor/blob/master/LICENSE

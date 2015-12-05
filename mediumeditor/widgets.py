@@ -19,7 +19,7 @@ class MediumEditorTextarea(forms.Textarea):
         }
         param_str = ' '.join('{}="{}"'.format(k, v) for k, v in params.items())
         html = super(MediumEditorTextarea, self).render(name, value, attrs)
-        html = format_html('{}<div {}></p>'.format(html, param_str))
+        html = format_html('{}<div {}></div>'.format(html, param_str))
         return html
 
     class Media:

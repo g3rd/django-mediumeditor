@@ -3,13 +3,18 @@ Adds [Medium Editor](https://yabwe.github.io/medium-editor/) to [Django](https:/
 
 ## Supported Environments
 
-Currently, the following environments are supported.
 * Django 1.9
 * Python 3.4
 
 ## Installation
 
 1. Install **django-mediumeditor**
+    
+    via PyPi:
+    ```
+    pip install django-mediumeditor
+    ```
+    via GIT:
 
     ``` 
 pip install git+https://github.com/g3rd/django-mediumeditor.git

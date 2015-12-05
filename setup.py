@@ -4,7 +4,7 @@ long_description = open('README.md').read()
 
 setup(
     name="django-mediumeditor",
-    version='0.1',
+    version='0.1.1',
     packages=["mediumeditor"],
     include_package_data=True,
     description="Medium Editor widget for Django",

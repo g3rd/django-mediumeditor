@@ -15,7 +15,7 @@ class MediumEditorTextarea(forms.Textarea):
         params = {
             'data-mediumeditor-textarea': identifier,
             'class': 'django-mediumeditor-editable',
-            'id': identifier,
+            'id': '{}_editable'.format(identifier),
         }
         param_str = ' '.join('{}="{}"'.format(k, v) for k, v in params.items())
         html = super(MediumEditorTextarea, self).render(name, value, attrs)

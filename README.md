@@ -77,7 +77,6 @@ class MyModelAdmin(MediumEditorAdmin, admin.ModelAdmin):
 
 Since this is a very new project, 
 
-- [ ] Pypi
 - [ ] Documentation
 - [ ] Clean-up Django admin display
     - Toolbar style

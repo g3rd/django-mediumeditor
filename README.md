@@ -51,7 +51,7 @@ class MyModelAdmin(MediumEditorAdmin, admin.ModelAdmin):
 1. Override the Widget for the field
 
     ```
-    from mediumeditor.widget import MediumEditorTextarea
+    from mediumeditor.widgets import MediumEditorTextarea
     
     class MyForm(forms.ModelForm):
         ...

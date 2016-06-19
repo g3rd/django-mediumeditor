@@ -1,6 +1,9 @@
 from __future__ import unicode_literals
+import json
 from django import forms
-from django.utils.html import format_html
+from django.utils.safestring import mark_safe
+
+from .conf import settings
 
 
 class MediumEditorTextarea(forms.Textarea):
@@ -19,7 +22,12 @@ class MediumEditorTextarea(forms.Textarea):
         }
         param_str = ' '.join('{}="{}"'.format(k, v) for k, v in params.items())
         html = super(MediumEditorTextarea, self).render(name, value, attrs)
-        html = format_html('{}<div {}></div>'.format(html, param_str))
+        options = json.dumps(settings.MEDIUM_EDITOR_OPTIONS)
+        html = mark_safe(u'''{}
+            <div {}></div>
+            <script type="text/javascript">
+                MediumEditorOptions={};
+            </script>'''.format(html, param_str, options))
         return html
 
     class Media:
@@ -27,6 +35,9 @@ class MediumEditorTextarea(forms.Textarea):
             '//cdn.jsdelivr.net/medium-editor/latest/css/'
             'medium-editor.min.css',
             'css/mediumeditor/django-mediumeditor.css',
+            '//cdn.jsdelivr.net/medium-editor/latest/css/themes/{}.min.css'.format(
+                settings.MEDIUM_EDITOR_THEME
+            )
         )}
         js = (
             '//cdn.jsdelivr.net/medium-editor/latest/js/medium-editor.min.js',

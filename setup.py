@@ -23,4 +23,7 @@ setup(
         "Programming Language :: Python",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
+    install_requires=[
+        'django-appconf >= 1.0.2',
+    ],
 )

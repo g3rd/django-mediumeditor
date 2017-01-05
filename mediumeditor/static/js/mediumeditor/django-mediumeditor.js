@@ -1,35 +1,7 @@
 (function() {
     function setup() {
         var selector = '.django-mediumeditor-editable';
-        var editor = new MediumEditor(selector, {
-            toolbar: {
-                buttons: [
-                    'bold',
-                    'italic',
-                    'underline',
-                    'strikethrough',
-                    'subscript',
-                    'superscript',
-                    'anchor',
-                    'quote',
-                    'pre',
-                    'orderedlist',
-                    'unorderedlist',
-                    'indent',
-                    'outdent',
-                    'justifyLeft',
-                    'justifyCenter',
-                    'justifyRight',
-                    'justifyFull',
-                    'h1',
-                    'h2',
-                    'h3',
-                    'h4',
-                    'h5',
-                    'h6',
-                ]
-            }
-        });
+        var editor = new MediumEditor(selector, MediumEditorOptions);
         // update the text box
         editor.subscribe('blur', function (event, editable) {
             // Get the HTML from the editor

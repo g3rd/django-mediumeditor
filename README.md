@@ -67,6 +67,46 @@ class MyModelAdmin(MediumEditorAdmin, admin.ModelAdmin):
     {{ form.media }}
     ```
 
+### Settings
+Optionaly change theme or change medium editor options in your settings.py
+```
+# Theme options `default`, `roman`, `mani`, `flat`, `bootstrap`, `tim`, `beagle`
+MEDIUM_EDITOR_THEME = 'beagle' # `default` is defualt theme
+MEDIUM_EDITOR_OPTIONS = {..}
+```
+[Available Options](https://github.com/yabwe/medium-editor/blob/master/OPTIONS.md)
+
+Example:
+```
+MEDIUM_EDITOR_THEME = 'bootstrap'
+MEDIUM_EDITOR_OPTIONS = {
+    'toolbar': {
+        'static': True,
+        'buttons': [
+            'bold',
+            'italic',
+            'underline',
+            'strikethrough',
+            'subscript',
+            'superscript',
+            'h1',
+            'h2',
+            'h3',
+            'h4',
+            'h5',
+            'h6',
+        ]
+    },
+    'paste': {
+        'forcePlainText': True,
+        'cleanPastedHTML': False,
+        'cleanReplacements': [],
+        'cleanAttrs': ['class', 'style', 'dir'],
+        'cleanTags': ['meta']
+    }
+}
+```
+
 ## Contributing
 
 [Take out some bugs](https://github.com/g3rd/django-mediumeditor/issues)

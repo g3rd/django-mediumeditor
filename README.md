@@ -17,7 +17,7 @@ Adds [Medium Editor](https://yabwe.github.io/medium-editor/) to [Django](https:/
     via GIT:
 
     ``` 
-pip install git+https://github.com/g3rd/django-mediumeditor.git
+    pip install git+https://github.com/g3rd/django-mediumeditor.git
     ```
 
 2. Install app

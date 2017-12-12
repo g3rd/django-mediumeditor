@@ -69,7 +69,7 @@ class MyModelAdmin(MediumEditorAdmin, admin.ModelAdmin):
 Optionaly change theme or change medium editor options in your settings.py
 ```
 # Theme options `default`, `roman`, `mani`, `flat`, `bootstrap`, `tim`, `beagle`
-MEDIUM_EDITOR_THEME = 'beagle' # `default` is defualt theme
+MEDIUM_EDITOR_THEME = 'beagle' # `default` is default theme
 MEDIUM_EDITOR_OPTIONS = {..}
 ```
 [Available Options](https://github.com/yabwe/medium-editor/blob/master/OPTIONS.md)

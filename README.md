@@ -3,13 +3,13 @@ Adds [Medium Editor](https://yabwe.github.io/medium-editor/) to [Django](https:/
 
 ## Supported Environments
 
-* Django 1.9
-* Python 3.4
+* Django 1.10+
+* Python 3.6
 
 ## Installation
 
 1. Install **django-mediumeditor**
-    
+
     via PyPi:
     ```
     pip install django-mediumeditor
@@ -46,13 +46,11 @@ class MyModelAdmin(MediumEditorAdmin, admin.ModelAdmin):
 
 ### Forms
 
-**NOTE:** This is untested
-
 1. Override the Widget for the field
 
     ```
     from mediumeditor.widgets import MediumEditorTextarea
-    
+
     class MyForm(forms.ModelForm):
         ...
         class Meta:

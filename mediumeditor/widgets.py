@@ -8,7 +8,7 @@ from .conf import settings
 
 class MediumEditorTextarea(forms.Textarea):
 
-    def render(self, name, value, attrs=None):
+    def render(self, name, value, attrs=None, renderer=None):
 
         if attrs is None:
             attrs = {}

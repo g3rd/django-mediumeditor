@@ -3,14 +3,14 @@ from setuptools import setup
 long_description = open('README.md').read()
 
 setup(
-    name="django-mediumeditor",
+    name="dj-mediumeditor",
     version='1.0.0',
-    packages=["mediumeditor"],
+    packages=["dj_mediumeditor"],
     include_package_data=True,
     description="Medium Editor widget for Django",
-    url="https://github.com/g3rd/django-mediumeditor",
-    author="Chad Shryock",
-    author_email="chad@aceportfol.io",
+    url="https://github.com/abedyngash/dj-mediumeditor",
+    author="Abedy Ng'ang'a",
+    author_email="abedy.nganga@gmail.com",
     license='MIT',
     long_description=long_description,
     platforms=["any"],
